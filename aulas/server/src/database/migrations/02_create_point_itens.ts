@@ -3,7 +3,7 @@ export async function  up (knex:Knex){
     return knex.schema.createTable('point_itens', table =>{
         table.increments('id').primary();
         table.integer('id_ponto').notNullable().references('id').inTable('points');
-        table.integer('id_itens').notNullable().references('id').inTable('itens');
+        table.integer('id_item' ).notNullable().references('id').inTable('itens');
     });
 }
 

@@ -26,10 +26,12 @@ routes.post('/points', async( request,response)=>{
         uf, 
         items
     } = request.body;
-    
-    const trx =  await knex.transaction(); //
+    console.log('open transaction');
+   const trx =  await knex.transaction();
 
-    const insertedIds = await trx('points').insert(
+
+    console.log('try insert points');
+    const insertedIds = await trx('points').insert(  
         {
             image: 'image-fake',
             name,
@@ -39,24 +41,24 @@ routes.post('/points', async( request,response)=>{
             longitude,
             city,
             uf 
-        });
-   
-    const point_id = insertedIds[0];
-
-    const pointItens  = items.map( 
-        (item_id: number) => {
-            console.log("item_id = " + item_id  + " point_id = " +  point_id);
-            return {
-                item_id,
-                point_id,
-            };
-            
         }
     );
 
-    await trx('point_itens').insert(pointItens)
+    const id_ponto = insertedIds[0];
 
-    return response.json ({ 'sucess': 'true'});
+    const pointItems  = items.map( 
+        (id_item: number) => {
+            return {
+            id_ponto,
+            id_item,
+            };    
+        })
+        await trx('point_itens').insert(pointItems)
+        await trx.commit();
+        console.log("transaction state = " + trx.isCompleted())
+
+
+    return response.json ({ 'sucess': trx.isCompleted()});
 });
 
 export default routes;
