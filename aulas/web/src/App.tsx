@@ -1,15 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import  Header from './Header'; 
 
+//JSX : Sintaxe  dentro do XML do Javascript
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello World!</h1>
+  let [counter,setCounter] = useState(0); //
 
-       </header>
+  function handlerButton(){
+  //  console.log(counter);
+    setCounter(counter + 1);
+  }
+
+  return (
+    <div>
+      <Header title="Hello Word"/> 
+        <h1>{counter}</h1>
+        <button type="button" onClick={handlerButton}>Aumentar </button>
+
     </div>
   );
 }
