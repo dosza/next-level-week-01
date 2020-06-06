@@ -11,7 +11,16 @@ const AppStack = createStackNavigator();
 const Routes = () => {
     return ( 
         <NavigationContainer>
-            <AppStack.Navigator>
+            <AppStack.Navigator 
+                headerMode="none"
+                
+                screenOptions={{
+                    //as duas chaves são usadas para {codigo java sript{objeto javascript}}
+                    cardStyle : {
+                        backgroundColor: '#f0f0f5'
+                    }
+                }}
+            >
                 <AppStack.Screen name="Home" component={Home} />
                 <AppStack.Screen name="Points" component={Points} />
                 <AppStack.Screen name="Detail" component={Detail} />
