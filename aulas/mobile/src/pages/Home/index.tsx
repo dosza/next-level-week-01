@@ -1,4 +1,5 @@
 import React from 'react';
+import {Feather as Icon} from '@expo/vector-icons'
 import {View,ImageBackground, Text,Image, StyleSheet} from 'react-native';
 
 import {RectButton} from 'react-native-gesture-handler';
@@ -24,7 +25,7 @@ const Home = () => {
                 >
                     <View style={styles.buttonIcon}>
                         <Text>
-                            >
+                            <Icon name="arrow-right" color="#FFF" size={24}/>
                         </Text>
                     </View>
                    
