@@ -6,6 +6,7 @@ import {View,Text,StyleSheet,Image,TouchableOpacity, ScrollView,SafeAreaView}  f
 import  MapView , {Marker} from 'react-native-maps';
 import {SvgUri} from 'react-native-svg'; 
 import api from '../../services/api';
+import * as Location from 'expo-location'
 
 
 interface Item {
@@ -18,6 +19,7 @@ const Points = () => {
     const navigation = useNavigation();
  
     const [items, setItems] =useState<Array<Item>>([])
+    const [selectedItens, setSelectedItens] = useState<Array<number> >([0]);
 
     useEffect (() =>{
       api.get('itens').then(response =>{
@@ -35,6 +37,19 @@ const Points = () => {
 
     function handleNavigateToDetail(){
       navigation.navigate('Detail')
+    }
+    //função para selecionar os itens
+    function handleSelectedItem (id:number) {
+ 
+      const alreadySelected  = selectedItens.findIndex(item => item === id )
+      if ( alreadySelected >= 0 ){    
+          const filteredItens = selectedItens.filter(item => item !== id);
+          setSelectedItens(filteredItens);
+      } else {
+          setSelectedItens([ ...selectedItens,id])
+      }
+    
+    
     }
 
 
@@ -81,11 +96,15 @@ const Points = () => {
             contentContainerStyle={{paddingHorizontal : 20 }}>
         
                { items.map(item =>(
-                    <TouchableOpacity 
+                    <TouchableOpacity
                       key={item.id} 
-                      style={styles.item} 
-                      onPress={ handleTest } 
-                      activeOpacity={0.7}
+                      style={[
+                      styles.item,
+                      selectedItens.includes(item.id) ? styles.selectedItem: {}
+
+                    ]}
+                     onPress={ ()=> {handleSelectedItem(item.id)} } 
+                      activeOpacity={0.6} 
                     >
                     <SvgUri width={42} height={42} uri={item.image_url}></SvgUri>
                     <Text style={styles.itemTitle}>{item.title}</Text>
