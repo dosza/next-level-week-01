@@ -14,8 +14,13 @@ const Points = () => {
     function handleNavigationBack(){
         navigation.goBack();
     }
+
     function handleTest(){
         console.log('entrei na função')
+    }
+
+    function handleNavigateToDetail(){
+      navigation.navigate('Detail')
     }
 
 
@@ -39,10 +44,12 @@ const Points = () => {
                 }}>
           
                 <Marker
+                  onPress={handleNavigateToDetail}
                   style={styles.mapMarker}
                   coordinate={{
                     latitude:-23.4660437,
                     longitude:-46.5330438
+                    
                   }}>
                     
                     <View style={styles.mapMarkerContainer}> 
