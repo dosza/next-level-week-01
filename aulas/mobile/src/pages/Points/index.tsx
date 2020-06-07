@@ -1,15 +1,29 @@
-import React from 'react';
+import React ,{ useState,useEffect} from 'react';
 import Constants from 'expo-constants';
 import {Feather as Icon} from '@expo/vector-icons';
 import {useNavigation} from '@react-navigation/native';
-import {View,Text,StyleSheet,Image,TouchableOpacity, ScrollView}  from 'react-native';
+import {View,Text,StyleSheet,Image,TouchableOpacity, ScrollView,SafeAreaView}  from 'react-native';
 import  MapView , {Marker} from 'react-native-maps';
 import {SvgUri} from 'react-native-svg'; 
+import api from '../../services/api';
 
+
+interface Item {
+  id: number,
+  title: string,
+  image_url: string
+}
 const Points = () => {
     
     const navigation = useNavigation();
+ 
+    const [items, setItems] =useState<Array<Item>>([])
 
+    useEffect (() =>{
+      api.get('itens').then(response =>{
+        setItems(response.data);
+      });
+  },[]);
     //função para retornar a tela anterior.
     function handleNavigationBack(){
         navigation.goBack();
@@ -25,7 +39,7 @@ const Points = () => {
 
 
     return(
-        <>
+        <SafeAreaView style={{flex:1}}>
           <View style={styles.container}>    
             <TouchableOpacity onPress={handleNavigationBack}>
                 <Icon name="arrow-left" size={20} color="#34cb79"/>
@@ -66,29 +80,21 @@ const Points = () => {
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={{paddingHorizontal : 20 }}>
         
-                <TouchableOpacity style={styles.item} onPress={ handleTest } >
-                    <SvgUri width={42} height={42} uri="http://192.168.3.191:3333/uploads/lampadas.svg"></SvgUri>
-                    <Text style={styles.itemTitle}>Lâmpadas</Text>
+               { items.map(item =>(
+                    <TouchableOpacity 
+                      key={item.id} 
+                      style={styles.item} 
+                      onPress={ handleTest } 
+                      activeOpacity={0.7}
+                    >
+                    <SvgUri width={42} height={42} uri={item.image_url}></SvgUri>
+                    <Text style={styles.itemTitle}>{item.title}</Text>
                 </TouchableOpacity>
-
-                <TouchableOpacity style={styles.item} onPress={ handleTest } >
-                    <SvgUri width={42} height={42} uri="http://192.168.3.191:3333/uploads/lampadas.svg"></SvgUri>
-                    <Text style={styles.itemTitle}>Lâmpadas</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.item} onPress={ handleTest } >
-                    <SvgUri width={42} height={42} uri="http://192.168.3.191:3333/uploads/lampadas.svg"></SvgUri>
-                    <Text style={styles.itemTitle}>Lâmpadas</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.item} onPress={ handleTest } >
-                    <SvgUri width={42} height={42} uri="http://192.168.3.191:3333/uploads/lampadas.svg"></SvgUri>
-                    <Text style={styles.itemTitle}>Lâmpadas</Text>
-                </TouchableOpacity>
+               ))}
                 
                 </ScrollView>
           </View>  
-        </>
+        </SafeAreaView >
     )
 
 }
