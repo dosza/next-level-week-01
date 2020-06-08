@@ -3,7 +3,7 @@
 O que é
 ---
 <p>
-	Uma Projeto desenvolvido na Semana <a href="https://nextlevelweek.com">Next Level Week #01</a>
+	Um Projeto desenvolvido na Semana <a href="https://nextlevelweek.com">Next Level Week #01</a>
 </p>
 
 Objetivo
