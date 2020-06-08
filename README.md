@@ -30,19 +30,18 @@ Responsável pela implementação da **API (Application Programming Interface) R
 
 API Rest:
 ---
-http://localhost:3333 ou http://seu_ip_local:3333
+O endereço do servidor geralmente é o http://localhost:3333 ou http://seu_ip_local:3333
 
 ### GET
 1. 	Listar todos os itens:
-2.	Listar pontos por ID
-3.	Listar Pontos Especificos
-4.	Listar Pontos por cidade, UF e itens
+2.	Listar ponto por ID
+3.	Listar Pontos por cidade, UF e itens
 
-#### Listar todos os itens
+#### 1 - Listar todos os itens
 http://localhost:3333/itens
 
 
-#### Listar Ponto por ID
+#### 2 - Listar Ponto por ID
 http://localhost:3333/points/{id}
 Parâmetro | tipo
 -----------|-----------
@@ -51,13 +50,13 @@ id| numeral
 ##### Exemplo:
 http://localhost:3333/points/1
 
-#### Listar Pontos Específico
+#### 3 - Listar Pontos Específico
 http://localhost:3333/points
 
 Parâmetros | Valor do parâmetro | Tipo
 -----------|-----------|-----------
 city  | nome da cidade | string
-UF    | sigla da UF | string
+uf    | sigla da UF | string
 itens|  num1,num2,... | string
 
 ##### Exemplo:
@@ -65,14 +64,17 @@ itens|  num1,num2,... | string
 Parâmetros | Valor do parâmetro | Tipo
 -----------| -----------|-----------
 city  | São Paulo | string
-UF    | SP | string
+uf    | SP | string
 itens|  1,2,6 | string
+
+URL com a query: http://localhost:3333/points/?city=Guarulhos&uf=SP&itens=1,2,6
 
 ### POST
 Formato de envio: arquivo multi-part!
 +	Cadastar Ponto de Coleta
 
 http://localhost:3333/points
+
 Parâmetros | Tipo| Valor
 -----------|-----------|-----------
 name  		| string  | 'Daniel'
