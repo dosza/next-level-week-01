@@ -9,7 +9,7 @@ interface Props {
 }
 
 
-//Define o componente React Dropzone
+//Define o componente React Dropzone 
 const Dropzone:React.FC<Props>= ({onFileUploaded})  => {
   const[selectedFileUrl, setSelectedFileUrl] = useState('');  
 
