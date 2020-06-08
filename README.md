@@ -33,10 +33,10 @@ API Rest:
 http://localhost:3333 ou http://seu_ip_local:3333
 
 ### GET
-1 	Listar todos os itens:
-*	Listar pontos por ID
-*	Listar Pontos Especificos
-*	Listar Pontos por cidade, UF e itens
+1. 	Listar todos os itens:
+2.	Listar pontos por ID
+3.	Listar Pontos Especificos
+4.	Listar Pontos por cidade, UF e itens
 
 #### Listar todos os itens
 http://localhost:3333/itens
