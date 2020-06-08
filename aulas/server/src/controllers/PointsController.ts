@@ -3,7 +3,7 @@ import knex from '../database/connection'
 
 class PointsController{
 
-    async create(request:Request,response:Response){
+    async  create(request:Request,response:Response){
         const {
             name,
             email,
@@ -17,7 +17,7 @@ class PointsController{
         
         const trx =  await knex.transaction();
         const point =  {
-            image: 'https://images.unsplash.com/photo-1556767576-5ec41e3239ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+            image:request.file.filename ,
             name,
             email,
             whatsapp,
@@ -30,16 +30,19 @@ class PointsController{
     
         const id_ponto = insertedIds[0];
     
-        const pointItems  = items.map( 
-            (id_item: number) => {
+        const pointItems = items
+            .split(',')
+            .map((item: string) => Number( item.trim() ))
+            .map( (id_item: number) => {
                 return {
                 id_item, 
                 id_ponto,
                 };    
-            })
+            });
+
             await trx('point_itens').insert(pointItems)
             await trx.commit();
-            console.log("transaction state = " + trx.isCompleted())
+            //console.log("transaction state = " + trx.isCompleted())
     
     
         return response.json ({ 
@@ -60,17 +63,24 @@ class PointsController{
             where point_itens.id =  {id}
             select(itens.title)
         */
+       const serializedPoint = {
+           ...point,
+           image_url:`http://192.168.3.191:3333/uploads/${point.image}`
+       }
 
         const itens = await knex('itens').join('point_itens','itens.id','=','point_itens.id_item')
         .where('point_itens.id_ponto',id).select('itens.title');
 
-        return response.json({point,itens}) ;
+        return response.json({point:serializedPoint,itens}) ;
     }
 
     async index(request:Request, response:Response){
         //cidade, uf, itens ]
         const {city,uf,itens} = request.query;
-        const parsedItens = String(itens).split(',').map(item => Number(item.trim()));
+        
+        const parsedItens = String(itens)
+        .split(',')
+        .map(item => Number(item.trim()));
 
         const points = await knex('points')
         .join('point_itens', 'points.id','=','point_itens.id_ponto')
@@ -80,6 +90,13 @@ class PointsController{
         .distinct() 
         .select('points.*');
         
+        const serializedPoints =  points.map(point =>{
+            return { 
+                ...point,
+                image_url:`http://192.168.3.191:3333/uploads/${point.image}  `
+
+            }
+        })
 
         console.log(city,uf,itens);
         return response.json(points);
