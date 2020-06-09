@@ -39,7 +39,7 @@ Endereço da aplicação web: http://localhost:3000
 
 **Aplicação Web:**
 
-![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_03_app_web.png)
+![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)
 
 **Aplicação Móvel:**
 
