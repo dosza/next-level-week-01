@@ -27,30 +27,31 @@ Módulos do Projeto
 Back-end: Servidor Web
 ---
 Responsável pela implementação da **API (Application Programming Interface) Rest** e a conexão com banco de dados.
+Endereço do servidor: http://localhost:3333
 
 API Rest:
 ---
-O endereço do servidor geralmente é o http://localhost:3333 ou http://seu_ip_local:3333
+Implementa ações com o método GET e POST.
 
-### GET
+## GET
 1. 	Listar todos os itens:
 2.	Listar ponto por ID
 3.	Listar Pontos por cidade, UF e itens
 
-#### 1 - Listar todos os itens
+### 1 - Listar todos os itens
 http://localhost:3333/itens
 
 
-#### 2 - Listar Ponto por ID
+### 2 - Listar Ponto por ID
 http://localhost:3333/points/{id}
 Parâmetro | tipo
 -----------|-----------
 id| numeral
 
-##### Exemplo:
+#### Exemplo:
 http://localhost:3333/points/1
 
-#### 3 - Listar Pontos Específico
+### 3 - Listar Pontos Específico
 http://localhost:3333/points
 
 Parâmetros | Valor do parâmetro | Tipo
@@ -59,7 +60,7 @@ city  | nome da cidade | string
 uf    | sigla da UF | string
 itens|  num1,num2,... | string
 
-##### Exemplo:
+#### Exemplo:
 
 Parâmetros | Valor do parâmetro | Tipo
 -----------| -----------|-----------
@@ -67,10 +68,10 @@ city  | São Paulo | string
 uf    | SP | string
 itens|  1,2,6 | string
 
-URL com a query: http://localhost:3333/points/?city=Guarulhos&uf=SP&itens=1,2,6
+*Query* resultante: http://localhost:3333/points/?city=S%C3%A3o%20Paulo&uf=SP&itens=1,2,6
 
 ### POST
-Formato de envio: arquivo multi-part!
+Formato de envio: arquivo *multipart*
 +	Cadastar Ponto de Coleta
 
 http://localhost:3333/points
@@ -92,6 +93,10 @@ image		| image/*   | arquivo.jpg
 
 Front-end:
 ---
+
+![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)
+Endereço da aplicação web: http://localhost:3000
+
 **Responsabilidades:**
 +	Cadastrar os Pontos de Coleta.
 +	Consultar os Pontos de Coleta por Cidade, UF e Itens recicláveis aceitos.
@@ -100,11 +105,11 @@ Front-end:
 +	Aplicativo Móvel
 +	Aplicação Web
 
+[!app](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_02_app.png)
 Tecnologias usadas
 ---
-+	ReactJS
 +	Node JS
-+	ReactJS
++	React JS
 +	React Native
 +	TypeScript
 +	Sqlite3
