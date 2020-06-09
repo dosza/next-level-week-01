@@ -162,7 +162,7 @@ http://localhost:3333/points/10
     "image": "c1f7c37e04d5-market.jpg",
     "name": "Mercado da Odete",
     "email": "odete@globo.com",
-    "whatsapp": "66984237457",
+    "whatsapp": "11999999999",
     "latitude": -23.01,
     "longitude": -46.01,
     "city": "Guarulhos",
