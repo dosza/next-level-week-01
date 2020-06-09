@@ -41,10 +41,11 @@ Endereço da aplicação web: http://localhost:3000
 
 ![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)
 
+<!--
 **Aplicação Móvel:**
 
 ![android](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_02_app.png)
-
+-->
 Back-end: Servidor Web
 ---
 Responsável pela implementação da **API Rest** e a conexão com banco de dados Sqlite3.
