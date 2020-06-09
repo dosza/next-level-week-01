@@ -1,4 +1,6 @@
-# Next Level Week # 01
+Next Level Week # 01
+===
+
 ![ecoleta](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/aulas/mobile/src/assets/logo.png)
 
 O que é
@@ -93,19 +95,21 @@ image		| image/*   | arquivo.jpg
 
 Front-end:
 ---
-
-![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)
+O front-end envia requisições para o back-end através da **API Rest**.
 Endereço da aplicação web: http://localhost:3000
 
 **Responsabilidades:**
 +	Cadastrar os Pontos de Coleta.
 +	Consultar os Pontos de Coleta por Cidade, UF e Itens recicláveis aceitos.
 
-**Disponível em:**
-+	Aplicativo Móvel
-+	Aplicação Web
+**Aplicação Web:**
+![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)
 
-[!app](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_02_app.png)
+**Aplicação Móvel:**
+
+![android](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_02_app.png)
+
+
 Tecnologias usadas
 ---
 +	Node JS
