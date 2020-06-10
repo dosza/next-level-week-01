@@ -88,10 +88,15 @@ image   | image/*   | arquivo de imagem
 Getting Started!
 ---
 Inicializando o servidor
-```sh
+```bash
+user@pc:$ cd server
 # configuração de dependencias
 user@pc:$ yarn
 # Inicialização do servidor
 user@pc:$ yarn run dev
 ```
-*[API Rest:](https://github.com/DanielOliveiraSouza/nlw/tree/master/docs/api_rest.md)*<br/>*[Notas de Lançamento](https://github.com/DanielOliveiraSouza/nlw/tree/master/docs/releases_notes.md)*
+Release Notes
+---
+Para informaçõs sobre novas funcionalidades  e correções de *bugs* leia as *[Notas de Lançamento](https://github.com/DanielOliveiraSouza/nlw/tree/master/docs/releases_notes.md)*
+---
+*[API Rest:](https://github.com/DanielOliveiraSouza/nlw/tree/master/docs/api_rest.md)*<br/>
