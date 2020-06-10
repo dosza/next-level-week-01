@@ -1,25 +1,21 @@
 <!--![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)-->
 Ecoleta - Next Level Week \# 01
 =======================================================================
-![version](https://img.shields.io/badge/Release-v0.1.0-green) ![made](https://img.shields.io/badge/language-typescript-blue)  
+![version](https://img.shields.io/badge/Release-v0.1.1-green) ![made](https://img.shields.io/badge/language-typescript-blue)  
 
 Um Projeto desenvolvido na Semana [Next Level Week \#1](https://nextlevelweek.com).<br/>Seu marketplace de coleta de resíduos.<br/>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
 
 
-
-
-Requisitos
----
-Consulte  *[tutorial](https://react-native.rocketseat.dev/)* de instalação feito pela Rocketseat.
-
 Tecnologias usadas
 ---
+Consulte  *[tutorial](https://react-native.rocketseat.dev/)* de instalação feito pela Rocketseat.
 + Node JS
 + React JS
 + React Native
 + TypeScript
 + Sqlite3
 + Expo
++ Insomnia
 
 Módulos do Projeto 
 ---
@@ -59,6 +55,9 @@ Responsável pela implementação da **API Rest** e a conexão com banco de dado
 5. Resíduos Orgânicos
 6. Óleo 
 
+API Rest
+---
+Leia a Especificação da *[API Rest:](https://github.com/DanielOliveiraSouza/nlw/tree/master/docs/api_rest.md)* para obter informações sobre Itens e Pontos disponíveis. <br/>
 <!--#### Definição de Itens
 Nome do atributo | Tipo | Informação
 -----------------|------|-----------
@@ -98,22 +97,20 @@ user@pc:$ yarn run dev
 Inicialização da Aplicação web
 ```console
 user@pc:~$ cd web
-# configuração de dependencias
+user@pc:~$ # configuração de dependencias
 user@pc:~$  yarn
-# Inicialização da aplicação web
+user@pc:~$ # Inicialização da aplicação web
 user@pc:$ yarn start
 ```
 Inicialização da App Movel
 ```console
 user@pc:~$ cd mobile
-# configuração de dependencias
+user@pc:~$ # configuração de dependencias
 user@pc:~$  yarn
-# Inicialização do App
+user@pc:~$ # Inicialização do App
 user@pc:$ expo start
 ```
 
 Release Notes
 ---
-Para informaçõs sobre novas funcionalidades  e correções de *bugs* leia as *[Notas de Lançamento](https://github.com/DanielOliveiraSouza/nlw/tree/master/docs/releases_notes.md)*
----
-*[API Rest:](https://github.com/DanielOliveiraSouza/nlw/tree/master/docs/api_rest.md)*<br/>
+Para informaçõs sobre novas funcionalidades  e correções de *bugs* leia as *[Notas de Lançamento](https://github.com/DanielOliveiraSouza/nlw/tree/master/docs/releases_notes.md)*<br/>

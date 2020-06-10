@@ -1,10 +1,9 @@
 API  Ecoleta.
 ===
-Versão: v0.1
-Esta API fornece informações sobre Eco-Pontos.
-Implementa ações com o método GET e POST.
+Versão: v0.1.0<br/>
+Esta API fornece informações sobre Eco-Pontos.<br/>Implementa ações com os métodos POST e GET.
 
-#### GET
+#### Método GET
 1. 	Listar todos os itens:
 2.	Listar ponto por ID
 3.	Listar Pontos Específico
@@ -141,7 +140,7 @@ itens|  1,2,6 | string
 ]
 ```
 
-#### POST
+#### Método POST
 Formato de envio: arquivo *multipart*
 +	Cadastar Ponto de Coleta
 
