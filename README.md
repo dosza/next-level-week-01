@@ -1,23 +1,25 @@
 Next Level Week # 01
 ===
-
-![ecoleta](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/aulas/mobile/src/assets/logo.png)
-
-O que é
----
+![version](https://img.shields.io/badge/Release-v0.1.0-green) ![made](https://img.shields.io/badge/language-typescript-blue)
 Um Projeto desenvolvido na Semana [Next Level Week #01](https://nextlevelweek.com).
-
 
 Objetivo
 ---
 Seu marketplace de coleta de resíduos.
 Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
 
-
 Requisitos
 ---
 [Ferramentas necessárias](https://react-native.rocketseat.dev/)
 
+Tecnologias usadas
+---
++ Node JS
++ React JS
++ React Native
++ TypeScript
++ Sqlite3
++ Expo
 
 Módulos do Projeto 
 ---
@@ -28,19 +30,21 @@ Módulos do Projeto
 
 Front-end:
 ---
-O front-end envia requisições para o back-end através da **API (Application Programming Interface) Rest**.
+O front-end envia requisições para o back-end através da **API (Application Programming Interface) Rest**. 
 Endereço da aplicação web: http://localhost:3000
+Endereço do aplicativo móvel (via expo) http://localhost:19000
 
 **Responsabilidade da aplicação Web:**
 +	Cadastrar os Pontos de Coleta. 
 
-**Responsabilidade da aplicativo Móve:**
+**Responsabilidade da aplicativo Móvel:**
+
 +	Consultar os Pontos de Coleta por Cidade, UF e Itens recicláveis aceitos.
 
-**Aplicação Web:**
+<!--**Aplicação Web:**-->
 
-![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)
-
+<!--![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)
+-->
 <!--
 **Aplicação Móvel:**
 
@@ -50,15 +54,14 @@ Back-end: Servidor Web
 ---
 Responsável pela implementação da **API Rest** e a conexão com banco de dados Sqlite3.
 Endereço do servidor: http://localhost:3333
-Endereço do aplicativo móvel (via expo) http://localhost:19000
+
 
 ### Entidades
-Duas entidades são fundamentais para a aplicação
 +	Itens
 +	Points
 
 #### Itens
-São resíduos orgânicos e inorgânicos coletado pelos estabelecimentos.
+São resíduos orgânicos e inorgânicos aceitos pelos estabelecimentos.
 
 #### Itens pré-definidos:
 1. Lâmpadas
@@ -77,7 +80,7 @@ image 		| string | nome da imagem associada ao item.
 
 
 #### Points
-Points armazena informações sobre o  Ponto de Coleta.¨ Seus atributos são:
+Points armazena informações sobre o  Ponto de Coleta.   Seus atributos são:
 
 Nome do atributo | Tipo | Informação
 -----------------|------|-----------
@@ -254,10 +257,3 @@ items		| string  | 1,2,3
 image		| image/*   | arquivo.jpg
 
 
-Tecnologias usadas
----
-+	Node JS
-+	React JS
-+	React Native
-+	TypeScript
-+	Sqlite3
