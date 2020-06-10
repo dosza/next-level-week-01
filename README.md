@@ -1,7 +1,7 @@
 <!--![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)-->
 Ecoleta - Next Level Week \# 01
 =======================================================================
-![version](https://img.shields.io/badge/Release-v0.1.1-green) ![made](https://img.shields.io/badge/language-typescript-blue)  
+![version](https://img.shields.io/badge/Release-v0.1.1-green) ![made](https://img.shields.io/badge/language-typescript-blue) ![license](https://img.shields.io/github/license/danieloliveirasouza/next-level-week-01)
 
 Um Projeto desenvolvido na Semana [Next Level Week \#1](https://nextlevelweek.com).<br/>Seu marketplace de coleta de resíduos.<br/>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
 
