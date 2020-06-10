@@ -1,15 +1,48 @@
-import React ,{useState} from 'react';
+import React ,{useState, useEffect} from 'react';
 import {Feather as Icon} from '@expo/vector-icons'
-import {View,ImageBackground, Text,Image, StyleSheet,TextInput,KeyboardAvoidingView,Platform} from 'react-native';
+import {View,ImageBackground, Text,Image, StyleSheet,TextInput,KeyboardAvoidingView,Platform, Picker} from 'react-native';
 import {useNavigation} from '@react-navigation/native'; 
- 
+import axios from 'axios';
+import  RNPickerSelect from 'react-native-picker-select';
 
 import {RectButton} from 'react-native-gesture-handler';
 
+
+interface IBGEResponse{
+  sigla : string
+}
+
+interface Item {
+  label: string,
+  value: string
+};
+
+
+
+function createItens(s:string){
+  const item:Item = {value:s,label:s};
+  return  item;
+
+}
 const Home = () => {
     const navigation = useNavigation(); // objeto para navegar de uma tela para outra
     const [uf,setUf] = useState('');
     const [city,setCity] = useState('');
+    const [ufs,setUfs]=useState<Item[]>([])
+   
+
+    useEffect( ()=>{
+      axios.get<IBGEResponse[]>("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
+      .then(response => {
+        const itens:Item [] = [];
+        response.data.map( (uf)=> {itens.push(createItens(uf.sigla))}
+      )
+      setUfs(itens);
+    });
+     
+      console.log(ufs);
+    },[]);
+
 
     //função para carregar a tela points
     function handleNavigationPoints(){
@@ -18,7 +51,7 @@ const Home = () => {
         });
     }
     
-    
+
     
     
     
@@ -42,16 +75,19 @@ const Home = () => {
 
 
               <View style={styles.footer}>
+              <RNPickerSelect
+            onValueChange={(value) => console.log(value)}
+            items={ufs}
+        />
 
-
-                <TextInput style={styles.input}
+                {/* <TextInput style={styles.input}
                   placeholder="Digite a UF"
                   value={uf}
                   onChangeText={setUf}
                   autoCapitalize="characters"
                   maxLength={2}
                   autoCorrect={false}
-                />
+                /> */}
                 <TextInput style={styles.input} 
                   placeholder="Digite a cidade"
                   value={city}
