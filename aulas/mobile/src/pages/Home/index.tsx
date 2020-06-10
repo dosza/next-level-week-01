@@ -12,36 +12,67 @@ interface IBGEResponse{
   sigla : string
 }
 
+interface IBGECityResponse {
+  nome: string
+}
+
 interface Item {
   label: string,
   value: string
 };
+const ufPlaceholder = {
+  label: 'Selecione um Estado',
+  value: null
+}
+
+const cityPlaceholder = {
+  label: 'Selecione uma Cidade',
+  value: null
+}
 
 
-
-function createItens(s:string){
+function createItem(s:string){
   const item:Item = {value:s,label:s};
   return  item;
 
 }
 const Home = () => {
     const navigation = useNavigation(); // objeto para navegar de uma tela para outra
-    const [uf,setUf] = useState('');
-    const [city,setCity] = useState('');
+      const [uf,setUf] = useState('0');
+    const [city,setCity] = useState('0');
     const [ufs,setUfs]=useState<Item[]>([])
+    const [cities, setCities] = useState<Item[]>([])
    
-
+    //inicializa a lista de estados
     useEffect( ()=>{
       axios.get<IBGEResponse[]>("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
       .then(response => {
         const itens:Item [] = [];
-        response.data.map( (uf)=> {itens.push(createItens(uf.sigla))}
+        response.data.map( (uf)=> {itens.push(createItem(uf.sigla))}
       )
       setUfs(itens);
     });
      
-      console.log(ufs);
+      //console.log(ufs);
     },[]);
+
+    useEffect(() =>{
+      if (uf === '0 '){
+        console.log('uf é vazio');
+        return ;
+      }
+      const city_url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`;
+      axios.get<IBGECityResponse[]>(city_url)
+      .then( response => {
+        const itens:Item [] = [];
+        response.data.map( (city) => { itens.push(createItem(city.nome))} )
+        setCities(itens);
+        //console.log(city_url)
+       // console.log("intens=\n",itens)
+      })
+      
+      //console.log(cities)
+  },[uf])
 
 
     //função para carregar a tela points
@@ -49,6 +80,17 @@ const Home = () => {
         navigation.navigate('Points',{
           uf,city
         });
+    }
+
+    //função para modificar o valor do estado
+    function handleChangeUf(value: string){
+      console.log(value)
+      setUf(value);
+    }
+    
+    //função para modificar cidades
+    function handleChangeSelectedCity(value: string){
+      setCity(value);
     }
     
 
@@ -75,10 +117,16 @@ const Home = () => {
 
 
               <View style={styles.footer}>
-              <RNPickerSelect
-            onValueChange={(value) => console.log(value)}
-            items={ufs}
-        />
+                <RNPickerSelect
+                  onValueChange={(value) => handleChangeUf(value)}
+                  items={ufs}
+                  placeholder={ufPlaceholder}
+              />
+                <RNPickerSelect
+                  onValueChange={(value) => handleChangeSelectedCity(value)}
+                  items={cities}
+                  placeholder={cityPlaceholder}
+              />
 
                 {/* <TextInput style={styles.input}
                   placeholder="Digite a UF"
@@ -88,12 +136,12 @@ const Home = () => {
                   maxLength={2}
                   autoCorrect={false}
                 /> */}
-                <TextInput style={styles.input} 
+                {/* <TextInput style={styles.input} 
                   placeholder="Digite a cidade"
                   value={city}
                   onChangeText={setCity}
                   autoCorrect={false}
-                />
+                /> */}
                   <RectButton style={styles.button} 
                       onPress={handleNavigationPoints}
                   >
