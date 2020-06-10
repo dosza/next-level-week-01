@@ -1,4 +1,4 @@
-![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)
+<!--![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)-->
 Ecoleta - Next Level Week \# 01
 =======================================================================
 ![version](https://img.shields.io/badge/Release-v0.1.0-green) ![made](https://img.shields.io/badge/language-typescript-blue)  
@@ -23,9 +23,9 @@ Tecnologias usadas
 
 Módulos do Projeto 
 ---
-+	[Servidor Web](https://github.com/DanielOliveiraSouza/nlw/tree/master/aulas/server)
-+	[Aplicativo Móvel](https://github.com/DanielOliveiraSouza/nlw/tree/master/aulas/mobile)
-+	[Aplicação Web](https://github.com/DanielOliveiraSouza/nlw/tree/master/aulas/web)
++ [Servidor Web](https://github.com/DanielOliveiraSouza/nlw/tree/master/aulas/server)
++ [Aplicativo Móvel](https://github.com/DanielOliveiraSouza/nlw/tree/master/aulas/mobile)
++ [Aplicação Web](https://github.com/DanielOliveiraSouza/nlw/tree/master/aulas/web)
 
 Front-end:
 ---
@@ -33,11 +33,11 @@ Front-end:
 O front-end envia requisições para o back-end através da **API Rest**.<br/>Endereço da aplicação web: http://localhost:3000<br/>Endereço do aplicativo móvel (via expo) http://localhost:19000
 
 **Responsabilidade da aplicação Web:**
-+	Cadastrar os Pontos de Coleta. 
++ Cadastrar os Pontos de Coleta. 
 
 **Responsabilidade da aplicativo Móvel:**
 
-+	Consultar os Pontos de Coleta por Cidade, UF e Itens recicláveis aceitos.
++ Consultar os Pontos de Coleta por Cidade, UF e Itens recicláveis aceitos.
 
 
 <!--**Aplicação Móvel:**
@@ -88,13 +88,30 @@ image   | image/*   | arquivo de imagem
 Getting Started!
 ---
 Inicializando o servidor
-```bash
-user@pc:$ cd server
+```console
+user@pc:~$ cd server
 # configuração de dependencias
-user@pc:$ yarn
+user@pc:~$  yarn
 # Inicialização do servidor
 user@pc:$ yarn run dev
 ```
+Inicialização da Aplicação web
+```console
+user@pc:~$ cd web
+# configuração de dependencias
+user@pc:~$  yarn
+# Inicialização da aplicação web
+user@pc:$ yarn start
+```
+Inicialização da App Movel
+```console
+user@pc:~$ cd mobile
+# configuração de dependencias
+user@pc:~$  yarn
+# Inicialização do App
+user@pc:$ expo start
+```
+
 Release Notes
 ---
 Para informaçõs sobre novas funcionalidades  e correções de *bugs* leia as *[Notas de Lançamento](https://github.com/DanielOliveiraSouza/nlw/tree/master/docs/releases_notes.md)*
