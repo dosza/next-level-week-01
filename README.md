@@ -1,7 +1,10 @@
-<!--![webapp](https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/screenshots/captura_01_app_web.png)-->
-Ecoleta - Next Level Week \# 01
-=======================================================================
-![version](https://img.shields.io/badge/Release-v0.1.1-green) ![made](https://img.shields.io/badge/language-typescript-blue) ![license](https://img.shields.io/github/license/danieloliveirasouza/next-level-week-01)
+<p align=center>
+  <img src="https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/aulas/mobile/src/assets/logo.png"/>
+</p>
+
+<p align=center>
+  <img src="https://img.shields.io/badge/Release-v0.1.1-green"/> <img src="https://img.shields.io/badge/language-typescript-blue!"/> <img src="https://img.shields.io/github/license/danieloliveirasouza/next-level-week-01"/>
+</p>
 
 Um Projeto desenvolvido na Semana [Next Level Week \#1](https://nextlevelweek.com).<br/>Seu marketplace de coleta de resíduos.<br/>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
 
@@ -89,10 +92,10 @@ Getting Started!
 Inicializando o servidor
 ```console
 user@pc:~$ cd server
-# configuração de dependencias
+user@pc:~$ # configuração de dependencias
 user@pc:~$  yarn
 # Inicialização do servidor
-user@pc:$ yarn run dev
+user@user@pc:~$ pc:~$  yarn run dev
 ```
 Inicialização da Aplicação web
 ```console
@@ -100,7 +103,7 @@ user@pc:~$ cd web
 user@pc:~$ # configuração de dependencias
 user@pc:~$  yarn
 user@pc:~$ # Inicialização da aplicação web
-user@pc:$ yarn start
+user@pc:~$  yarn start
 ```
 Inicialização da App Movel
 ```console
@@ -108,7 +111,7 @@ user@pc:~$ cd mobile
 user@pc:~$ # configuração de dependencias
 user@pc:~$  yarn
 user@pc:~$ # Inicialização do App
-user@pc:$ expo start
+user@pc:~$ expo start
 ```
 
 Release Notes
