@@ -3,12 +3,12 @@
 </p>
 
 <p align=center>
-  <img src="https://img.shields.io/badge/Release-v0.1.1-green"/> <img src="https://img.shields.io/badge/language-typescript-blue!"/> <img src="https://img.shields.io/github/license/danieloliveirasouza/next-level-week-01"/>
+  <img src="https://img.shields.io/badge/Release-v0.1.1-green"/> <img src="https://img.shields.io/badge/language-typescript-blue"/> <img src="https://img.shields.io/github/license/danieloliveirasouza/next-level-week-01"/>
 </p>
 
 Ecoleta - Next Level Week \# 1 
 ---
-Um Projeto desenvolvido na Semana [Next Level Week \#1](https://nextlevelweek.com).<br/>Seu marketplace de coleta de resíduos.<br/>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
+Um Projeto desenvolvido na Semana [Next Level Week \#1](https://nextlevelweek.com) da [Rockteseat](https://rocketseat.com.br/).<br/>Seu marketplace de coleta de resíduos.<br/>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
 
 
 Tecnologias usadas
