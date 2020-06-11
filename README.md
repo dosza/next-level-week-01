@@ -1,10 +1,11 @@
 <p align=center>
-  <img src="https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/aulas/mobile/src/assets/logo.png"/>
+  <img src="https://img.shields.io/badge/Release-v0.1.1-green"/> <img src="https://img.shields.io/badge/language-typescript-blue"/> <img src="https://img.shields.io/github/license/danieloliveirasouza/next-level-week-01"/>
 </p>
 
 <p align=center>
-  <img src="https://img.shields.io/badge/Release-v0.1.1-green"/> <img src="https://img.shields.io/badge/language-typescript-blue"/> <img src="https://img.shields.io/github/license/danieloliveirasouza/next-level-week-01"/>
+  <img src="https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/aulas/mobile/src/assets/logo.png"/>
 </p>
+
 
 Ecoleta - Next Level Week \# 1 
 ---
