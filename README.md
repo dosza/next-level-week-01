@@ -98,7 +98,7 @@ user@pc:~$ cd server
 user@pc:~$ #Configuração de dependencias
 user@pc:~$ yarn
 user@pc:~$ #Inicialização do servidor
-user@pc:~$ pc:~$ yarn run dev
+user@pc:~$ yarn run dev
 ```
 Inicialização da Aplicação web
 ```console
