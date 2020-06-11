@@ -8,7 +8,7 @@
 
 Ecoleta - Next Level Week \# 1 
 ---
-Um Projeto desenvolvido na Semana *[Next Level Week \#1](https://nextlevelweek.com)* da *[Rockteseat](https://rocketseat.com.br/)*.<br/>Seu marketplace de coleta de resíduos.<br/>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
+Um Projeto desenvolvido na Semana *[Next Level Week \#1](https://nextlevelweek.com)* da *[Rocketseat](https://rocketseat.com.br/)*.<br/>Seu marketplace de coleta de resíduos.<br/>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
 
 
 Tecnologias usadas
@@ -94,25 +94,25 @@ Getting Started!
 Inicializando o servidor
 ```console
 user@pc:~$ cd server
-user@pc:~$ # configuração de dependencias
-user@pc:~$  yarn
-# Inicialização do servidor
-user@user@pc:~$ pc:~$  yarn run dev
+user@pc:~$ #Configuração de dependencias
+user@pc:~$ yarn
+user@pc:~$ #Inicialização do servidor
+user@pc:~$ pc:~$ yarn run dev
 ```
 Inicialização da Aplicação web
 ```console
 user@pc:~$ cd web
-user@pc:~$ # configuração de dependencias
-user@pc:~$  yarn
-user@pc:~$ # Inicialização da aplicação web
-user@pc:~$  yarn start
+user@pc:~$ #configuração de dependencias
+user@pc:~$ yarn
+user@pc:~$ #Inicialização da aplicação web
+user@pc:~$ yarn start
 ```
 Inicialização da App Movel
 ```console
 user@pc:~$ cd mobile
-user@pc:~$ # configuração de dependencias
-user@pc:~$  yarn
-user@pc:~$ # Inicialização do App
+user@pc:~$ #configuração de dependencias
+user@pc:~$ yarn
+user@pc:~$ #Inicialização do App
 user@pc:~$ expo start
 ```
 
