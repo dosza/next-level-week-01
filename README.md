@@ -1,9 +1,10 @@
 <p align=center>
-  <img src="https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/aulas/mobile/src/assets/logo.png"/>
+  <img src="https://raw.githubusercontent.com/DanielOliveiraSouza/nlw/master/aulas/mobile/src/assets/logo.png"
+  />
 </p>
 
 <p align=center>
-  <img src="https://img.shields.io/badge/Release-v0.1.1-green"/> <img src="https://img.shields.io/badge/language-typescript-blue"/> <img src="https://img.shields.io/github/license/danieloliveirasouza/next-level-week-01"/>
+  <a href="https://github.com/DanielOliveiraSouza/next-level-week-01/archive/v0.1.1.zip"><img src="https://img.shields.io/badge/Release-v0.1.1-green"/> </a><img src="https://img.shields.io/badge/language-typescript-blue"/> <a href="https://github.com/DanielOliveiraSouza/next-level-week-01/LICENSE.md"><img src="https://img.shields.io/github/license/danieloliveirasouza/next-level-week-01"/></a>
 </p>
 
 
