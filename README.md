@@ -94,8 +94,8 @@ image   | image/*   | arquivo de imagem
 Getting Started!
 ---
 Inicializando o servidor
-```console
-user@pc:~$ cd server
+	```console
+	user@pc:~$ cd server
 user@pc:~$ #Configuração de dependencias
 user@pc:~$ yarn
 user@pc:~$ #Inicialização do servidor
